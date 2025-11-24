@@ -32,7 +32,7 @@ post_install() {
   echo "==> Reboot to use the new kernel."
 }
 
-post_upgrade() {
+pre_upgrade() {
   local kernver="6.17.9-dirty"
   
   # Backup old files
