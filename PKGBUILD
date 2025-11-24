@@ -16,7 +16,7 @@ source=("https://github.com/cetola/mnt-build/releases/download/${pkgver}-arch-mn
         "extlinux.conf.example")
 sha256sums=('SKIP'  # Replace with actual checksum
             'SKIP')  # Replace with actual checksum
-options=('!strip')  # Disable all stripping
+options=(!strip !docs !libtool !staticlibs !emptydirs)
 
 package() {
   cd "${srcdir}"
