@@ -1,5 +1,5 @@
 post_install() {
-  local kernver="6.17.8-dirty"
+  local kernver="6.17.9-dirty"
   
   echo "==> Building initramfs for kernel ${kernver}..."
   # If you're running LVM on LUKS, add kernel modules:
@@ -33,7 +33,7 @@ post_install() {
 }
 
 post_upgrade() {
-  local kernver="6.17.8-dirty"
+  local kernver="6.17.9-dirty"
   
   # Backup old files
   echo "==> Backing up old kernel files..."
@@ -52,7 +52,7 @@ post_upgrade() {
 }
 
 post_remove() {
-  local kernver="6.17.8-dirty"
+  local kernver="6.17.9-dirty"
   
   echo "==> Cleaning up kernel ${kernver}..."
   

@@ -1,6 +1,6 @@
 # Maintainer: Your Name <your.email@example.com>
 pkgname=linux-mnt-pocket
-pkgver=6.17.8
+pkgver=6.17.9
 _kernver="${pkgver}-dirty"
 pkgrel=1
 pkgdesc="Linux kernel for MNT Pocket Reform (arm64)"
