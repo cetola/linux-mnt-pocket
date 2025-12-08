@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = usr/lib/modules/*/modules.dep
+
+[Action]
+Description = Building initramfs for linux-mnt-pocket kernel
+When = PostTransaction
+Exec = /usr/bin/dracut -f /boot/initramfs-linux-testing --kver 6.17.11-mnt-pocket --no-hostonly --add-drivers "nvme nvme_core nvme_keyring nvme_auth"
+
