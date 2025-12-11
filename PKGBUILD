@@ -2,7 +2,7 @@
 
 pkgname=linux-mnt-pocket
 pkgver=6.17.11
-pkgrel=1
+pkgrel=2
 _kernver="${pkgver}-mnt-pocket"
 pkgdesc="Linux kernel for MNT Pocket Reform (arm64)"
 arch=('aarch64')
@@ -20,10 +20,11 @@ source=(
   "mnt-pocket-backup.sh"
 )
 sha256sums=(
-  '4f5850583160be1b5131cff08390b1234cebb3644eb085dbfcc512d578b9bb7d'
-  '672b1922a43856cb6466354a1b2432c7cf8dedfa3da25c8e59a1a0dcb0c7a83e'
-  '4710c4556ee94d7264211093db1f3f3368e5fd3e100f3ed81006f7041acc64bf'
-  'SKIP'
+  '8703be8996bf7b2ee02e6632bce85d83f1842fa8060af5c60e02caadf0c6153c'
+  '38fced8cce1d1c175c7a81b522af2ecdaee94735aa48aa4e9a29b75d2d75bd49'
+  'c88373dffc2867c4f66d38e2958ac4ad97beab19225f1a3bd3bc1b98232bb8c7'
+  'ca6b8f54f8a4933635b4e64328a17c172504729a075c38268cbdc8e861f1944b'
+  'f073ad1a241603fb0ed53ca46e5bcf3da064ec53de9d854a41359ec9d76d858d'
 )
 
 options=(!strip !docs !emptydirs)
