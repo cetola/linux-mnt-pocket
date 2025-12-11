@@ -13,7 +13,7 @@ provides=('linux' 'linux-aarch64')
 conflicts=('linux')
 backup=('etc/modprobe.d/reform-qcacld2.conf')
 source=(
-  "kernel-${pkgver}-mnt.tar.gz::https://github.com/cetola/mnt-build/releases/download/${pkgver}-${pkgrel}-mnt-pocket/kernel-${pkgver}-mnt.tar.gz"
+  "kernel-${pkgver}-mnt.tar.gz::https://github.com/cetola/mnt-build/releases/download/${pkgver}-${pkgrel}-mnt-pocket/kernel-${pkgver}-${pkgrel}-mnt.tar.gz"
   "extlinux.conf.example"
   "mnt-pocket-initramfs.hook"
 )
