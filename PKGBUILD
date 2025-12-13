@@ -12,19 +12,18 @@ depends=('dracut' 'kmod')
 provides=('linux' 'linux-aarch64')
 conflicts=('linux')
 backup=('etc/modprobe.d/reform-qcacld2.conf')
+install="${pkgname}.install"
 source=(
   "kernel-${pkgver}-${pkgrel}-mnt.tar.gz::https://github.com/cetola/mnt-build/releases/download/${pkgver}-${pkgrel}-mnt-pocket/kernel-${pkgver}-${pkgrel}-mnt.tar.gz"
   "extlinux.conf.example"
   "mnt-pocket-initramfs.hook"
-  "mnt-pocket-backup.hook"
-  "mnt-pocket-backup.sh"
+  "mnt-pocket-initramfs.sh"
 )
 sha256sums=(
-  '8703be8996bf7b2ee02e6632bce85d83f1842fa8060af5c60e02caadf0c6153c'
+  '530217b511c302ec33864217e26df0cf568e11b3a4732fdc99ae7fe1ae08d910'
   '38fced8cce1d1c175c7a81b522af2ecdaee94735aa48aa4e9a29b75d2d75bd49'
-  'c88373dffc2867c4f66d38e2958ac4ad97beab19225f1a3bd3bc1b98232bb8c7'
-  'ca6b8f54f8a4933635b4e64328a17c172504729a075c38268cbdc8e861f1944b'
-  'f073ad1a241603fb0ed53ca46e5bcf3da064ec53de9d854a41359ec9d76d858d'
+  '4a799cdb15bb62469056daccbb6465de5477eb0128f0430608e0e4b99b651eba'
+  'ee36d2090bfc55e3fddfdfba7767a6af1cbd294ab421a5a10d43757290fb5e58'
 )
 
 options=(!strip !docs !emptydirs)
@@ -59,10 +58,7 @@ package() {
   install -Dm644 "$srcdir/mnt-pocket-initramfs.hook" \
     "$pkgdir/usr/share/libalpm/hooks/mnt-pocket-initramfs.hook"
 
-  install -Dm644 "$srcdir/mnt-pocket-backup.hook" \
-    "$pkgdir/usr/share/libalpm/hooks/mnt-pocket-backup.hook"
-
-  install -Dm755 "$srcdir/mnt-pocket-backup.sh" \
-    "$pkgdir/usr/bin/mnt-pocket-backup.sh"
+  install -Dm755 "$srcdir/mnt-pocket-initramfs.sh" \
+    "$pkgdir/usr/lib/linux-mnt-pocket/mnt-pocket-initramfs.sh"
 }
 
