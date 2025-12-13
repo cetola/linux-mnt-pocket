@@ -5,6 +5,6 @@ Operation = Upgrade
 Target = linux-mnt-pocket
 
 [Action]
-Description = Ensuring Image-testing symlink exists and building initramfs
+Description = Updating module dependencies and building initramfs for linux-mnt-pocket
 When = PostTransaction
-Exec = /bin/bash -c 'if [ -f /boot/Image-linux-mnt-pocket ] && ([ ! -L /boot/Image-testing ] || [ ! -f /boot/Image-testing ]); then ln -sf Image-linux-mnt-pocket /boot/Image-testing; fi && /usr/bin/dracut -f /boot/initramfs-linux-testing --kver 6.17.11-mnt-pocket --no-hostonly --add-drivers "nvme nvme_core nvme_keyring nvme_auth"'
+Exec = /usr/lib/linux-mnt-pocket/mnt-pocket-initramfs.sh
