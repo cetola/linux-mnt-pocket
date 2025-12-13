@@ -1,8 +1,8 @@
 # Maintainer: Stephano Cetola <stephanoc@gmail.com>
 
 pkgname=linux-mnt-pocket
-pkgver=6.17.11
-pkgrel=2
+pkgver=6.17.12
+pkgrel=1
 _kernver="${pkgver}-mnt-pocket"
 pkgdesc="Linux kernel for MNT Pocket Reform (arm64)"
 arch=('aarch64')
