@@ -1,7 +1,7 @@
 # Maintainer: Stephano Cetola <stephanoc@gmail.com>
 
 pkgname=linux-mnt-pocket
-pkgver=6.18.3
+pkgver=6.18.4
 pkgrel=1
 _kernver="${pkgver}-mnt-pocket"
 pkgdesc="Linux kernel for MNT Pocket Reform (arm64)"
@@ -20,7 +20,7 @@ source=(
   "mnt-pocket-initramfs.sh"
 )
 sha256sums=(
-  'b0cdf9cd52e60c05d63a7ecb765e06bf2354c4a1e2945343efedc9ff063b1e0e'
+  '1b307b6707a711ea8388bd98d968f4da75b8acc8ad05da3bdd781ca47cce1793'
   '38fced8cce1d1c175c7a81b522af2ecdaee94735aa48aa4e9a29b75d2d75bd49'
   '4a799cdb15bb62469056daccbb6465de5477eb0128f0430608e0e4b99b651eba'
   'ee36d2090bfc55e3fddfdfba7767a6af1cbd294ab421a5a10d43757290fb5e58'
